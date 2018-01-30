@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #000;
+}
+
 ul {
     list-style: none;
 }
@@ -27,4 +31,5 @@ a {
 
 input {
     border:none;
+    outline: none;
 }
