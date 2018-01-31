@@ -90,7 +90,6 @@ header {
     float: left;
     margin-left: 20px;
     font-size: 13px;
-
 }
 
 .action .write {
@@ -114,8 +113,10 @@ header {
     line-height: 2;
     border-radius: 6px;
     box-shadow:0px 5px 12px #eaeaea;
+    background-color: #fff;
     padding: 0 15px;
     display: none;
+    z-index: 10;
 }
 
 .search-panel::before {
@@ -157,6 +158,8 @@ header {
     left: 0px;
     width: 160px;
     box-shadow: 0px 5px 12px #eaeaea;
+    background-color: #fff;
+
 }
 
 .user:hover {
@@ -186,9 +189,7 @@ aside {
 }
 
 main {
-    height: 640px;
     margin-right: 320px;
-    background-color: #f00;
 }
 
 .carousel {
@@ -221,7 +222,18 @@ main .carousel-imgs{
     top: calc(50% - 27.5px);
     display: none;
 }
+.carsousel-panel {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -48.08px;
+}
 
+.carsousel-panel .carsousel-dot {
+    width: 30px;
+    height: 2px;
+    background-color: #ccc;
+}
 .carousel .left {
     left: 0;
 }
@@ -255,5 +267,65 @@ main .carousel-imgs{
     color: #787878;
 }
 
+.content .avatar {
+    vertical-align: middle;
+}
 
+.content .avatar img{
+    width: 32px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.content .item {
+    position: relative;
+    border-top: 1px solid rgb(204, 204, 204);
 
+}
+
+.content  .item .cover {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -62px;
+}
+
+.content .cover img {
+    width: 150px;
+    border-radius: 5px;
+}
+.content .detail {
+    margin-right: 160px;
+}
+
+.detail .username {
+    vertical-align: middle;
+}
+
+.detail .time {
+    vertical-align: middle;
+    color: #ccc
+}
+
+.head {
+    margin: 20px 0;
+    font-size: 12px;
+}
+.foot {
+    margin: 20px 0;
+    font-size: 12px;
+}
+.foot a{
+    padding: 2px 2px;
+    border: 1px solid rgb(240, 144, 131);
+    border-radius: 5px;
+    color: rgb(245, 154, 142);
+
+}
+
+.foot span {
+    color: rgb(180, 180, 180);
+}
+.foot .iconfont {
+    margin-left: 10px;
+
+}
