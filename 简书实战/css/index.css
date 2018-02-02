@@ -5,6 +5,9 @@ header {
     padding:0 15px;
 }
 
+section.layout {
+    margin-top: 30px;
+}
 .logo {
     float: left;
 }
@@ -297,6 +300,7 @@ main .content .detail {
 }
 
 main .detail .username {
+    color: #333;
     vertical-align: middle;
 }
 
@@ -305,6 +309,9 @@ main .detail .time {
     color: #ccc
 }
 
+main .detail .title a{
+    color: #333;
+}
 main .content .head {
     margin: 20px 0;
     font-size: 12px;
@@ -348,20 +355,24 @@ aside .board img {
 
 aside .download .tooltip{
     position: absolute;
-    top: -200px;
+    top: -191px;
     left: 50px;
     padding: 15px;
     background-color: #fff;
+    display: none;
 }
 
+aside .download:hover .tooltip{
+    display: block;
+}
 aside .download .tooltip::after {
     content:"";
     width:10px;
     height: 10px;
     background-color: #fff;
     display: block;
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    border-right: 1px solid rgb(202, 202, 202);
     transform: rotate(45deg);
     position: absolute;
     bottom: -5px;
@@ -376,6 +387,7 @@ aside .download .tooltip img{
 
 aside .download {
     position: relative;
+    margin-top: 5px;
 }
 
 aside .download >a {
@@ -401,14 +413,29 @@ aside .download p{
     color: #999;
 }
 
+.recommend {
+    margin-top: 30px;
+    color: rgb(179, 169, 159);
+    font-size:14px;
+}
+
+.recommend a{
+    color: rgb(179, 169, 159);
+    font-size:14px;
+}
 aside .recommend .refresh{
     float: right;
 }
 
 aside .recommend .iteam {
     margin-top: 10px;
+    line-height: 24px;
 }
 
+aside .recommend .iteam h4{
+    font-weight: normal;
+    margin-top: 5px;
+}
 aside  .content .avatar img{
     height: 100%;
 }
@@ -416,9 +443,11 @@ aside  .content .avatar img{
 aside  .content .avatar{
     height: 50px;
     float: left;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    overflow: hidden;
 }
-
-
 
 aside .content .username {
     font-size: 14px;
