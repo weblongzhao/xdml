@@ -185,7 +185,6 @@ aside {
     float: right;
     width: 280px;
     height: 300px;
-    background-color: #0f0;
 }
 
 main {
@@ -267,54 +266,54 @@ main .carousel-imgs{
     color: #787878;
 }
 
-.content .avatar {
+main .content .avatar {
     vertical-align: middle;
 }
 
-.content .avatar img{
+main .content .avatar img{
     width: 32px;
     border-radius: 50%;
     vertical-align: middle;
 }
-.content .item {
+main .content .item {
     position: relative;
     border-top: 1px solid rgb(204, 204, 204);
 
 }
 
-.content  .item .cover {
+main .content  .item .cover {
     position: absolute;
     right: 0;
     top: 50%;
     margin-top: -62px;
 }
 
-.content .cover img {
+main .content .cover img {
     width: 150px;
     border-radius: 5px;
 }
-.content .detail {
+main .content .detail {
     margin-right: 160px;
 }
 
-.detail .username {
+main .detail .username {
     vertical-align: middle;
 }
 
-.detail .time {
+main .detail .time {
     vertical-align: middle;
     color: #ccc
 }
 
-.head {
+main .content .head {
     margin: 20px 0;
     font-size: 12px;
 }
-.foot {
+main .content .foot {
     margin: 20px 0;
     font-size: 12px;
 }
-.foot a{
+main .content .foot a{
     padding: 2px 2px;
     border: 1px solid rgb(240, 144, 131);
     border-radius: 5px;
@@ -322,10 +321,129 @@ main .carousel-imgs{
 
 }
 
-.foot span {
+main .content .foot span {
     color: rgb(180, 180, 180);
 }
-.foot .iconfont {
+main .content .foot .iconfont {
     margin-left: 10px;
 
+}
+
+main  .read-more {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #a5a5a5;
+    border-radius: 20px;
+}
+
+main  .read-more:hover {
+    background-color: #9b9b9b;
+}
+
+aside .board img {
+    height: 50px;
+}
+
+aside .download .tooltip{
+    position: absolute;
+    top: -200px;
+    left: 50px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+aside .download .tooltip::after {
+    content:"";
+    width:10px;
+    height: 10px;
+    background-color: #fff;
+    display: block;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+aside .download .tooltip img{
+    height: 150px;
+    width: 150px;
+}
+
+aside .download {
+    position: relative;
+}
+
+aside .download >a {
+    padding: 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+aside .download >a img{
+    float: left;
+    height: 60px;
+}
+
+aside .download h3{
+    margin-left: 65px;
+    font-size: 15px;
+    color: #333;
+}
+
+aside .download p{
+    margin-left: 65px;
+    font-size: 13px;
+    color: #999;
+}
+
+aside .recommend .refresh{
+    float: right;
+}
+
+aside .recommend .iteam {
+    margin-top: 10px;
+}
+
+aside  .content .avatar img{
+    height: 100%;
+}
+
+aside  .content .avatar{
+    height: 50px;
+    float: left;
+}
+
+
+
+aside .content .username {
+    font-size: 14px;
+    color: #000;
+}
+
+aside .content .concern {
+    float: right;
+    font-size: 14px;
+    color: #42c02e;
+    float: right;
+}
+
+aside .content p {
+    color: #969696;
+    font-size: 12px;
+}
+
+aside .look-all {
+    padding: 5px 0;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    color: #999;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
 }
