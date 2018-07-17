@@ -1,0 +1,55 @@
+*{
+    margin:0;
+}
+
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+
+.logo {
+    float: left;
+    font-style: 24px;
+    font-family: 'Arial Black';
+}
+
+.logo .rs{
+    color: #e8676b;
+}
+
+.logo .card {
+    color: #9a9da2;
+}
+
+nav {
+    float: right;
+    padding-top: 7px;
+}
+
+nav li{
+    float: left;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+nav a {
+    padding:5px;
+    border-bottom: 4px solid transparent;
+}
+
+nav li:hover > a{
+    border-bottom-color: red;
+}
+
+
