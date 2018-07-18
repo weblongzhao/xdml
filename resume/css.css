@@ -128,9 +128,18 @@ nav li:hover > a{
 }
 
 .media a{
-    height: 40px;
     width: 40px;
     display: inline-block;
-    background-color: #cf5d5f;
+    background-color: #e6686a;
     margin:16px;
+}
+
+.media a:hover{
+    background-color:  #cf5d5f;
+}
+
+.media .icon{
+    width: 30px;
+    height: 30px;
+    fill: #fff;
 }
