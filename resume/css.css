@@ -131,7 +131,9 @@ nav li:hover > a{
     width: 40px;
     display: inline-block;
     background-color: #e6686a;
+    padding:3px 0;
     margin:16px;
+    border-radius: 50%;
 }
 
 .media a:hover{

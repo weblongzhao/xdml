@@ -1,0 +1,24 @@
+.clearfix::after{
+    display:block;
+    content:'';
+    clear: both;
+}
+
+.topNavBar {
+
+}
+
+.topNavBar .logo {
+    float: left;
+}
+
+.topNavBar nav {
+    float: right;
+}
+
+
+
+
+
+
+
