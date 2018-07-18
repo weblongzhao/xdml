@@ -21,6 +21,12 @@ li {
     font-size: 24px;
     padding-top:20px;
     padding-bottom: 20px;
+    position:fixed;
+    top:0;
+    width: 100%;
+}
+
+.topNavBar .inner {
     padding-left:20px;
     padding-right: 20px;
 }
@@ -64,4 +70,67 @@ nav li:hover > a{
     border-bottom-color: red;
 }
 
+.banner {
+    background-image:url("./images/rs-cover.jpg");
+    background-position: center center;
+    background-size:cover;
+    height: 515px;
+}
 
+.banner::after {
+    content:"";
+    display: block;
+    height: 515px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.userCard {
+    max-width: 940px;
+    margin:0 auto;
+}
+
+.picureAndText {
+    padding:54px 50px;
+
+}
+
+.picture {
+    float: left;
+}
+
+.text {
+    float: left;
+    margin-left: 66px;
+    width: 470px;
+}
+
+.text hr{
+    margin:22px 0;
+}
+.text dl dt,
+.text dl dd{
+    float: left;
+    margin-bottom:15px;
+}
+
+.text dl dt{
+    font-weight: bold;
+    width: 30%;
+}
+
+.text dl dd {
+    width: 70%;
+}
+
+.media {
+    background-color: #e6686a;
+    text-align:center;
+}
+
+.media a{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #cf5d5f;
+    margin:16px;
+}
