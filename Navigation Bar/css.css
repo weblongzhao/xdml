@@ -17,6 +17,13 @@ li {
     list-style-type: none;
 }
 
+.topNavBar {
+    font-size: 24px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    padding-left:20px;
+    padding-right: 20px;
+}
 
 .logo {
     float: left;
@@ -34,7 +41,8 @@ li {
 
 nav {
     float: right;
-    padding-top: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 nav li{
@@ -46,6 +54,9 @@ nav li{
 nav a {
     padding:5px;
     border-bottom: 4px solid transparent;
+    color:#b7b7b7;
+    font-size: 12px;
+    display: block;
 }
 
 nav li:hover > a{
