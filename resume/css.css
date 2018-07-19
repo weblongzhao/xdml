@@ -149,3 +149,29 @@ nav li:hover > a{
     height: 30px;
     fill: #fff;
 }
+
+.userCard .hello {
+    color: #fff;
+    padding:5px 17px;
+    display: inline-block;
+    background-color: #e6686a;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.userCard .hello::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border:10px solid transparent;
+    border-left-color: #e6686a;
+    border-top-width:0 ;
+    position: absolute;
+    top: 100%;
+    left: 4px;
+}
+
+.userCard .text h1 {
+    margin-top:18px;
+}
