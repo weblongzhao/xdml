@@ -50,13 +50,13 @@ li {
     color: #9a9da2;
 }
 
-nav {
+.topNavBar nav {
     float: right;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-nav li{
+.topNavBar nav li{
     float: left;
     margin-left: 17px;
     margin-right: 17px;
@@ -289,7 +289,76 @@ nav li:hover > a{
     }
 }
 
+.portfolio{
+    text-align:center;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom:100px;
+}
 
+.portfolio nav {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:28px;
+    margin-top: 60px;
+}
 
+.portfolio nav li {
+    margin-left: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+.portfolio nav li:nth-child(1){
+    margin-left:0;
+}
+
+.portfolio .portfolioBar {
+    display: inline-block;
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.portfolio .portfolioBar .inner{
+    background-color: #e6686a;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.portfolio .portfolioBar.state-1 .inner {
+    width: 32px;
+
+}
+.portfolio .portfolioBar.state-2 .inner {
+    width: 32px;
+    margin-left: 73px;
+}
+.portfolio .portfolioBar.state-3 .inner {
+    width: 90px;
+    margin-left: 144px;
+}
+
+.works {
+    position:relative;
+    height: 597px;
+}
+
+.works .big {
+    float: left;
+    position: absolute;
+}
+
+.works .small {
+    float: right;
+    position: absolute;
+}
+
+.works .small:nth-child(3){
+    margin-top:23px;
+}
 
 

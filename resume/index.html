@@ -27,10 +27,8 @@
         </div>
     </div>
     <div class="banner">
-
     </div>
-
-    <main>
+    <main style="margin-top:-340px;">
         <div class="userCard">
             <div class="picureAndText clearfix">
                 <div class="picture">
@@ -74,51 +72,84 @@
             姓名xxx,工作xxx职位xxx <br>
             技能xxx,精通xxx熟悉xxx
         </p>
-        <section class="skills">
-            <h2>技能</h2>
-            <ol class="clearfix">
-                <li class="skillItem">
-                    <h3>HTML5&CSS3</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-               <li class="skillItem">
-                    <h3>javascript</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-                <li class="skillItem">
-                    <h3>Node.js</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-                <li class="skillItem">
-                    <h3>React.js</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-                <li class="skillItem">
-                    <h3>Vue.js</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-                <li class="skillItem">
-                    <h3>JQuery</h3>
-                    <div class="progressBar">
-                        <div class="progress"></div>
-                    </div>
-                </li>
-            </ol>
-        </section>
-        <section>
-            <h2>作品展示区</h2>
-        </section>
     </main>
+    <section class="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li class="skillItem">
+                <h3>HTML5&CSS3</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li class="skillItem">
+                <h3>javascript</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li class="skillItem">
+                <h3>Node.js</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li class="skillItem">
+                <h3>React.js</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li class="skillItem">
+                <h3>Vue.js</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li class="skillItem">
+                <h3>JQuery</h3>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+    <section class="portfolio">
+        <h2>作品展示区</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS&CSS</li>
+            </ol>
+            <div id="portfolioBar" class="portfolioBar state-1">
+                <div class="inner"></div>
+            </div>
+        </nav>
+        <script>
 
+            portfolio1.onclick= function(){
+                portfolioBar.className = 'portfolioBar state-1'
+            }
+            portfolio2.onclick= function(){
+                portfolioBar.className = 'portfolioBar state-2'
+            }
+            portfolio3.onclick= function(){
+                portfolioBar.className = 'portfolioBar state-3'
+            }
+
+        </script>
+        <div class="works clearfix">
+            <div class="big" style="left:0;top:0;">
+                <img src="./images/1.jpg" alt="1pic">
+            </div>
+            <div class="small" style="left:645px;top:0;">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="small" style="left:645px;top:290px;">
+                <img src="./images/3.jpg" alt="">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
