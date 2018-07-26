@@ -24,7 +24,7 @@ body{
     background: radial-gradient(ellipse at center, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(239,239,239,1) 99%, rgba(239,239,239,1) 100%);
 }
 
-.kbdBox kbd:hover {
+.kbdBox kbd.active {
     background: radial-gradient(ellipse at center, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(239,239,239,1) 64%, rgba(239,239,239,1) 100%);
 }
 .kbdBox kbd img {
