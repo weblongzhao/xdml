@@ -1,0 +1,36 @@
+* {
+    padding:0 ;
+    margin:0 ;
+}
+
+body{
+    background-color: #dddddd;
+}
+
+.kbdBox {
+    text-align: center;
+}
+
+.kbdBox kbd {
+    width: 57px;
+    height: 57px;
+    position: relative;
+    line-height: 57px;
+    display: inline-block;
+    /*background-color: #efefef;*/
+    transition: all 0.5s;
+    margin: 0 16px 16px 0;
+    border-radius:10px;
+    background: radial-gradient(ellipse at center, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(239,239,239,1) 99%, rgba(239,239,239,1) 100%);
+}
+
+.kbdBox kbd:hover {
+    background: radial-gradient(ellipse at center, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(239,239,239,1) 64%, rgba(239,239,239,1) 100%);
+}
+.kbdBox kbd img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    bottom: 0;
+}
