@@ -34,3 +34,21 @@ body{
     left: 0;
     bottom: 0;
 }
+
+.kbdBox .edit {
+    background-color: #ffa500;
+    display: none;
+    color: #fffff5;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 4px;
+    line-height: 18px;
+    top: 4px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.kbdBox kbd:hover .edit {
+    display: inline-block;
+}
