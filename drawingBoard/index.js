@@ -1,6 +1,3 @@
-function  init() {
-    this.context=canvas.getContext('2d');
-}
 // 初始化
 var canvas = document.querySelector("#canvas") ;
 var tool = document.querySelector("#tool");
@@ -16,7 +13,7 @@ var flag=false;
 var lastpoint=null;
 var newpoint = null;
 var eraser = false;
-
+// 画图tool
 eraser1.onclick = function(){
         eraser = true ;
         tool.classList.add('active')
@@ -25,10 +22,15 @@ eraser1.onclick = function(){
 pen.onclick = function(){
         eraser = false ;
         tool.classList.remove('active')
-}
+};
+clear.onclick = function(){
+       del();
+};
+
 // 鼠标按下事件
 canvas.onmousedown = function (e) {
-        console.log(context)
+        console.log(range.value);
+        console.log(context) ;
         flag =true;
         console.log('未开始画画') ;
         console.log(e.target.classList) ;
@@ -41,17 +43,26 @@ canvas.onmousedown = function (e) {
 };
 // 鼠标移动事件
 document.onmousemove = function (e) {
-    if(flag){
-        console.log("开始画画");
-        console.log(e.x,":",e.y) ;
-        var clientX = e.x;
-        var clientY = e.y;
-        newpoint = {
-            x:clientX,
-            y:clientY
-        };
-        drawing({x:clientX,y:clientY}) ;
 
+        if(flag){
+            console.log(eraser,"eraser");
+            if(eraser===false){
+                console.log("开始画画");
+                console.log(e.x,":",e.y) ;
+
+                var clientX = e.x;
+                var clientY = e.y;
+                newpoint = {
+                    x:clientX,
+                    y:clientY
+                };
+                drawing({x:clientX,y:clientY}) ;
+             }else{
+                var clientX = e.x;
+                var clientY = e.y;
+                console.log(clientX,clientY) ;
+                Eraser(clientX,clientY) ;
+            }
     }else {
         console.log('未开启画画')
     }
@@ -63,7 +74,8 @@ document.onmouseup = function (e) {
 
 function drawing(){
     context.beginPath();
-    context.strokeStyle="#ffffff";
+    context.strokeStyle=color.value;
+    context.lineWidth= range.value/10;
     context.lineTo(lastpoint.x,lastpoint.y);
     context.lineTo(newpoint.x,newpoint.y);
     context.stroke();
@@ -71,7 +83,15 @@ function drawing(){
     lastpoint=newpoint;
 }
 
+function Eraser(x,y){
+    console.log('成功擦除');
+    context.clearRect(x-5, y-5, 10, 10);
+}
 
+function  del() {
+    console.log('清除画布');
+    context.clearRect(0,0,canvas.width,canvas.height);
+}
 
 
 
