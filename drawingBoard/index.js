@@ -13,6 +13,7 @@ var flag=false;
 var lastpoint=null;
 var newpoint = null;
 var eraser = false;
+var recordPoint = [];
 // 画图tool
 eraser1.onclick = function(){
         eraser = true ;
@@ -43,7 +44,6 @@ canvas.onmousedown = function (e) {
 };
 // 鼠标移动事件
 document.onmousemove = function (e) {
-
         if(flag){
             console.log(eraser,"eraser");
             if(eraser===false){
@@ -56,6 +56,7 @@ document.onmousemove = function (e) {
                     x:clientX,
                     y:clientY
                 };
+                rec(newpoint) ;
                 drawing({x:clientX,y:clientY}) ;
              }else{
                 var clientX = e.x;
@@ -70,6 +71,26 @@ document.onmousemove = function (e) {
 // 鼠标松开事件
 document.onmouseup = function (e) {
     flag=false;
+    console.log(recordPoint);
+    recordPoint.forEach((i,index)=>{
+        console.log(i,'记录点',index)
+    })
+};
+//播放功能
+play.onclick = function(){
+    console.log('开始播放');
+    del();
+    var index=0;
+    setInterval(function(){
+        if(index<=recordPoint.length){
+            lastpoint=recordPoint[index];
+            newpoint=recordPoint[index+1];
+            drawing();
+            index++;
+        }
+    },30);
+    lastpoint=null;
+    newpoint=null;
 };
 
 function drawing(){
@@ -93,5 +114,7 @@ function  del() {
     context.clearRect(0,0,canvas.width,canvas.height);
 }
 
-
+function rec(currentPoint){
+    recordPoint.push(currentPoint) ;
+}
 
