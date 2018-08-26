@@ -15,9 +15,9 @@
             </a>
             <nav>
                 <ul class="clearfix">
-                    <li class=""><a href="#">关于</a></li>
-                    <li class=""><a href="#">技能</a></li>
-                    <li class=""><a href="#">作品</a></li>
+                    <li class=""><a href="#about">关于</a></li>
+                    <li class=""><a href="#skills">技能</a></li>
+                    <li class=""><a href="#portfolio">作品</a></li>
                     <li class=""><a href="#">博客</a></li>
                     <li class=""><a href="#">日历</a></li>
                     <li class=""><a href="#">联系方式</a></li>
@@ -30,7 +30,7 @@
     </div>
     <main style="margin-top:-340px;">
         <div class="userCard">
-            <div class="picureAndText clearfix">
+            <div data-target="#about" class="picureAndText clearfix">
                 <div class="picture">
                     <img width="299" height="347" src="./images/avatar.jpg" alt="avatar">
                 </div>
@@ -73,7 +73,7 @@
             技能xxx,精通xxx熟悉xxx
         </p>
     </main>
-    <section class="skills">
+    <section data-target="#skills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li class="skillItem">
@@ -114,7 +114,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section data-target="#portfolio" class="portfolio">
         <h2>作品展示区</h2>
         <nav>
             <ol class="clearfix">
