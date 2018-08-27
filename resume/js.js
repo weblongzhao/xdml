@@ -12,6 +12,7 @@ let lias = document.querySelectorAll(".topNavBar  nav li>a");
 var num=0;
 lias.forEach(function(val,key){
     val.onclick=function (x) {
+        x.preventDefault();
         let targetName=x.currentTarget.getAttribute('href');
         // document.querySelector('["data-'+targetName+'"]');
         console.log(document.querySelector('[data-target="#skills"]').offsetTop);
@@ -19,4 +20,20 @@ lias.forEach(function(val,key){
     };
 
 });
+
+// 导航子菜单
+
+let aTargets= document.getElementsByClassName('menuTigger');
+console.log(aTargets) ;
+for(let i =0;i<aTargets.length;i++){
+    console.log(aTargets[i].parentElement,'123');
+    aTargets[i].onmouseenter=function (x) {
+        console.log(x.currentTarget) ;
+        x.currentTarget.classList.add('active');
+    };
+    aTargets[i].onmouseleave=function (x) {
+        console.log(x.currentTarget) ;
+        x.currentTarget.classList.remove('active');
+    };
+}
 

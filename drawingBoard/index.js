@@ -26,7 +26,9 @@ pen.onclick = function(){
 clear.onclick = function(){
        del();
 };
-
+canvas.touchstart = function(e){
+    console.log("开始摸")
+} ;
 // 鼠标按下事件
 canvas.onmousedown = function (e) {
         console.log(range.value);

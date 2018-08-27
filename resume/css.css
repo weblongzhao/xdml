@@ -65,23 +65,73 @@ li {
     padding-bottom: 5px;
 }
 
-.topNavBar nav li{
+.topNavBar nav >ul > li{
     float: left;
     margin-left: 17px;
     margin-right: 17px;
+    position: relative;
 }
 
 
-nav a {
-    padding:5px;
+nav  a {
+    padding-top:5px;
+    padding-bottom:5px;
     border-bottom: 4px solid transparent;
     color:#b7b7b7;
+    text-align:center;
     font-size: 12px;
     display: block;
 }
 
-nav li:hover > a{
+nav >ul > li > a{
+    position: relative;
+}
+
+nav >ul > li > a:hover::after{
+    content:'';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    position: absolute;
+    top: 100%;
     border-bottom-color: red;
+    animation: 0.5s slide-border;
+}
+
+
+.menuTigger + ul{
+    display: none;
+    position: absolute;
+}
+.menuTigger + ul > li {
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+.menuTigger.active + ul{
+    display: block;
+    animation: .5s slideNav;
+    background-color: #fff;
+}
+
+@keyframes slideNav {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-border {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:100%;
+    }
 }
 
 .banner {
