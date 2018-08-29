@@ -419,5 +419,8 @@ nav >ul > li > a:hover::after{
 .works .small:nth-child(3){
     margin-top:23px;
 }
-
+/*高亮类*/
+.hightlight {
+    border:2px solid red;
+}
 

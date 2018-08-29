@@ -10,16 +10,42 @@ window.onscroll=function(xx){
 
 let lias = document.querySelectorAll(".topNavBar  nav li>a");
 var num=0;
-lias.forEach(function(val,key){
+/*lias.forEach(function(val,key,index){
+
     val.onclick=function (x) {
         x.preventDefault();
-        let targetName=x.currentTarget.getAttribute('href');
+        let targetName = x.currentTarget.getAttribute('href');
         // document.querySelector('["data-'+targetName+'"]');
-        console.log(document.querySelector('[data-target="#skills"]').offsetTop);
-        window.scrollTo(0,document.querySelector("[data-target='"+targetName+"']").offsetTop-60);
-    };
 
-});
+        window.scrollTo(current, target);
+    }
+});*/
+for(let i =0;i<lias.length;i++){
+    lias[i].onclick=function (x) {
+        x.preventDefault();
+        let targetName = x.currentTarget.getAttribute('href');
+        // document.querySelector('["data-'+targetName+'"]');
+
+        //缓动动画
+        let n = 25 ; //一共动多少次
+        let duration = 500/n; //每次时间
+        let currentTop = window.scrollY ;
+        let targetTop = document.querySelector("[data-target='"+targetName+"']").offsetTop-60 ;
+        let distance = (targetTop-currentTop)/n ;
+        console.log(currentTop,'currenttop')
+        console.log(targetTop,'targetTop')
+        console.log(distance,'distance')
+        let i = 0;
+        let id = setInterval(function(){
+            if(i===n){
+                window.clearInterval(id);
+                return
+            }
+            i= i+1;
+            window.scrollTo(0,currentTop+distance*i);
+        },duration);
+    }
+}
 
 // 导航子菜单
 
