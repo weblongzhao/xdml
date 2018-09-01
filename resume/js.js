@@ -1,9 +1,26 @@
 window.onscroll=function(xx){
     if(window.scrollY > 0){
-        document.querySelector('.topNavBar').classList.add('sticky')
+        document.querySelector('.topNavBar').classList.add('sticky') ;
     }else {
-        document.querySelector('.topNavBar').classList.remove('sticky')
+        document.querySelector('.topNavBar').classList.remove('sticky') ;
     }
+    // 滚动高亮元素
+    let specTags = document.querySelectorAll('[data-x]') ;
+    console.log(specTags) ;
+    let minIndex = 0;
+    //找出用户当前在看的元素
+    for(let i =1;i<specTags.length; i++ ){
+        if(Math.abs(specTags[minIndex].offsetTop - window.scrollY) > Math.abs(specTags[i].offsetTop - window.scrollY)){
+            minIndex =i;
+        }
+    }
+    console.log(minIndex,'最小元素index');
+    //给元素添加边框
+    specTags.forEach(function(item,index){
+        specTags[index].classList.remove('hightlight');
+    });
+    specTags[minIndex].classList.add('hightlight');
+
 };
 
 // 点击导航滑动到指定位置
