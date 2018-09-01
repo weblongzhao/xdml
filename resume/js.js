@@ -24,26 +24,27 @@ for(let i =0;i<lias.length;i++){
     lias[i].onclick=function (x) {
         x.preventDefault();
         let targetName = x.currentTarget.getAttribute('href');
-        // document.querySelector('["data-'+targetName+'"]');
-
         //缓动动画
-        let n = 25 ; //一共动多少次
-        let duration = 500/n; //每次时间
         let currentTop = window.scrollY ;
         let targetTop = document.querySelector("[data-target='"+targetName+"']").offsetTop-60 ;
-        let distance = (targetTop-currentTop)/n ;
-        console.log(currentTop,'currenttop')
-        console.log(targetTop,'targetTop')
-        console.log(distance,'distance')
-        let i = 0;
-        let id = setInterval(function(){
-            if(i===n){
-                window.clearInterval(id);
-                return
-            }
-            i= i+1;
-            window.scrollTo(0,currentTop+distance*i);
-        },duration);
+        // Setup the animation loop.
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+        var coords = { y:currentTop }; // Start at (0, 0)
+        var s = Math.abs(targetTop-currentTop);
+        var t = (s/100)*300 ;
+        if(t>500){t=500};
+        var tween = new TWEEN.Tween(coords)
+            .to({y:targetTop },t)
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onUpdate(function() {
+                window.scrollTo(0,coords.y);
+            })
+            .start();
+
     }
 }
 
