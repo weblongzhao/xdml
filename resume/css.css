@@ -424,3 +424,32 @@ nav >ul > li > a:hover::after{
     border:2px solid red;
 }
 
+/*留言板*/
+.message {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 50px auto;
+    overflow: scroll;
+}
+
+.message ul {
+    margin-top: 10px;
+}
+.message li {
+    border-bottom: 2px dashed #b7b7b7;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -81,3 +81,91 @@ for(let i =0;i<aTargets.length;i++){
     };
 }
 
+//留言功能实现
+// 存储服务
+var APP_ID = 'deqGjtnzzioid309TaY5odqh-gzGzoHsz';
+var APP_KEY = 'FHlT3Jd5Yl2sNCO24nYFJveQ';
+
+AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+});
+
+
+
+var formbox = document.querySelector('#form') ;
+console.log(formbox) ;
+//获取留言内容
+getContent('TestObject','content',document.querySelector('#lxbox'));
+function getContent(tableName,field,Ele){
+    var query = new AV.Query(tableName);
+    query.include(field);
+    query.find().then(function (text) {
+        // 查询到商品后，在前端展示到相应的位置中。
+        var content = text.map(
+            function(item){
+                return item.attributes[field];
+            }
+        ) ;
+        console.log(content) ;
+        content.forEach(
+            function(item){
+                console.log(item);
+                let Li=document.createElement('li');
+                Li.innerText=item;
+                Ele.append(Li);
+            }
+        )
+    }).catch(
+        function(error) {alert(JSON.stringify(error));}
+    );
+}
+//
+formbox.addEventListener('submit',function(e){
+    e.preventDefault();
+    // 发送留言
+    var lyContent =formbox.querySelector('#text').value;
+    var Todo = AV.Object.extend('TestObject');
+    // 新建一个 Todo 对象
+    var todo = new Todo();
+    if(lyContent==="") return ;
+    todo.set('content',lyContent);
+    todo.save().then(function (todo) {
+        // 成功保存之后，执行其他逻辑.
+        console.log('New object created with objectId: ' + todo.id);
+        //添加留言内容
+        var query = new AV.Query('TestObject');
+        query.get(todo.id).then(function (todo) {
+            // 成功获得实例
+            let addText = todo.attributes['content'];
+            let Li=document.createElement('li');
+            Li.innerText=addText;
+            document.querySelector('#lxbox').append(Li);
+            formbox.querySelector('#text').value='' ;
+        }, function (error) {
+            // 异常处理
+        });
+
+    }, function (error) {
+        // 异常处理
+        console.error('Failed to create new object, with error message: ' + error.message);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
