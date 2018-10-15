@@ -1,0 +1,33 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    transition: all 1s;
+}
+
+#code {
+    position: absolute;
+    border: 1px solid ;
+    height: 100vh;
+}
+
+.style {
+    position:absolute;
+    top: 100px;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
